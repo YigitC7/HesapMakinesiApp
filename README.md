@@ -5,7 +5,7 @@
 </div>
 
 # Hesap Makinesi
-Geliştirmeye başladığım yeni bir proje. İlk defa nesne tabanlı UI programı yazıyorum. Sıradan bir hesap makinesi programıdır. Örenk bir proje olarak yapılmıştır ama isteyen kullanailir.
+Geliştirmeye başladığım yeni bir proje. İlk defa nesne tabanlı GUI programı yazıyorum. Sıradan bir hesap makinesi programıdır. Örenk bir proje olarak yapılmıştır ve isteyen kullanailir.
 ## indirme
 ### Python Kodu: <a href="https://github.com/YigitC7/HesapMakinesiApp/releases/download/2025.03.09/main.py">İndir</a>
 Python kodu yorumlayıcısı ile çalışabilir, bu yorumlayıcı olduğu sürece bütün işletim sistemlerinde, mimari fark etmeksizin çalışır.
