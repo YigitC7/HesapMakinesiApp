@@ -5,8 +5,8 @@ class MainWindow:
     def __init__(self,Window):
         self.Window = Window
         self.Window.minsize(410,400)
-        self.Window.maxsize(700,400)
-        self.Window.geometry('700x400')
+        self.Window.maxsize(410,400)
+        self.Window.geometry('410x400')
         self.Window.title("Hesap Makinesi")
 
         self.Panel()
