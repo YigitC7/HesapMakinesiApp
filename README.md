@@ -1,5 +1,7 @@
-
+<div align="center">
 ![image](window.png)
+</div>
+
 # Hesap Makinesi
 Geliştirmeye başladığım yeni bir proje. İlk defa nesne tabanlı UI programı yazıyorum. Sıradan bir hesap makinesi programıdır.
 ## indirme
