@@ -9,6 +9,6 @@ Geliştirmeye başladığım yeni bir proje. İlk defa nesne tabanlı GUI progra
 ## indirme
 ### Python Kodu: <a href="https://github.com/YigitC7/HesapMakinesiApp/releases/download/2025.03.09/main.py">İndir</a>
 Python kodu yorumlayıcısı ile çalışabilir, bu yorumlayıcı olduğu sürece bütün işletim sistemlerinde, mimari fark etmeksizin çalışır.
-### Exe for Windows: <a href="https://github.com/YigitC7/HesapMakinesiApp/releases/download/2025.03.09/Hesap.MakinesiApp.exe">İndir</a>
+### Windows exe: <a href="https://github.com/YigitC7/HesapMakinesiApp/releases/download/2025.03.09/Hesap.MakinesiApp.exe">İndir</a>
 Exe bin dosyası Windows 10-11 64 Bit için uygundur.
 
