@@ -5,12 +5,13 @@ class MainWindow:
     def __init__(self,Window):
         self.Window = Window
         self.Window.minsize(410,400)
-        self.Window.maxsize(410,400)
+        self.Window.maxsize(620,440)
         self.Window.geometry('410x400')
         self.Window.title("Hesap Makinesi")
 
         self.Panel()
         self.Buttons()
+        self.imza()
 
     def Panel(self):
         class panel():
@@ -48,6 +49,8 @@ class MainWindow:
 
         def Buton_esittir_fonk():
             main_panel_oldData = self.main_panel.get("0.0", ctk.END).strip()
+            main_panel_oldData = main_panel_oldData.replace("x","*")
+            main_panel_oldData = main_panel_oldData.replace("^","**")
     
             if main_panel_oldData:
                 try:
@@ -65,6 +68,9 @@ class MainWindow:
             main_panel_oldData = self.main_panel.get("0.0", ctk.END).strip()
             self.main_panel.delete("1.0","end")
             self.main_panel.insert("0.0",main_panel_oldData[slice(0,-1)])
+        
+        def temizle_fonk():
+            self.main_panel.delete("1.0","end")
 
         class button:
             def __init__(self,
@@ -312,7 +318,7 @@ class MainWindow:
             width = 70,
             fg_color = "#C84153",
             hover_color = "#D36977",
-            panel_read = "*"
+            panel_read = "x"
         )
         self.Buton_carpi = ctk.CTkButton(self.Window,
             text=_Buton_carpi_.text,
@@ -345,6 +351,147 @@ class MainWindow:
             command=sil_fonk
             )
         self.Buton_sil.place(x=_Buton_sil_.place_x, y=_Buton_sil_.place_y)
+
+        _Buton_acikp_ = button(
+            text = "(",
+            place_x = 450,
+            place_y = 100,
+            height = 60,
+            width = 70,
+            panel_read = "(",
+            fg_color = "#DAA520",
+            hover_color = "#FFD700",
+            font=("italic",30)
+        )
+        self.Buton_acikp = ctk.CTkButton(self.Window,
+            text=_Buton_acikp_.text,
+            font=_Buton_acikp_.font,
+            height=_Buton_acikp_.height,
+            width=_Buton_acikp_.width,
+            fg_color=_Buton_acikp_.fg_color,
+            hover_color=_Buton_acikp_.hover_color,
+            command=partial(main_panel_add_fonk,_Buton_acikp_.panel_read)
+            )
+        self.Buton_acikp.place(x=_Buton_acikp_.place_x, y=_Buton_acikp_.place_y)
+
+        _Buton_kapalip_ = button(
+            text = ")",
+            place_x = 530,
+            place_y = 100,
+            height = 60,
+            width = 70,
+            panel_read = ")",
+            fg_color = "#DAA520",
+            hover_color = "#FFD700",
+            font=("italic",30)
+        )
+        self.Buton_kapalip = ctk.CTkButton(self.Window,
+            text=_Buton_kapalip_.text,
+            font=_Buton_kapalip_.font,
+            height=_Buton_kapalip_.height,
+            width=_Buton_kapalip_.width,
+            fg_color=_Buton_kapalip_.fg_color,
+            hover_color=_Buton_kapalip_.hover_color,
+            command=partial(main_panel_add_fonk,_Buton_kapalip_.panel_read)
+            )
+        self.Buton_kapalip.place(x=_Buton_kapalip_.place_x, y=_Buton_kapalip_.place_y)
+
+        _Buton_bolme_ = button(
+            text = "/",
+            place_x = 450,
+            place_y = 180,
+            height = 60,
+            width = 70,
+            panel_read = "/",
+            fg_color = "#DAA520",
+            hover_color = "#FFD700",
+            font=("italic",30)
+        )
+        self.Buton_bolme = ctk.CTkButton(self.Window,
+            text=_Buton_bolme_.text,
+            font=_Buton_bolme_.font,
+            height=_Buton_bolme_.height,
+            width=_Buton_bolme_.width,
+            fg_color=_Buton_bolme_.fg_color,
+            hover_color=_Buton_bolme_.hover_color,
+            command=partial(main_panel_add_fonk,_Buton_bolme_.panel_read)
+            )
+        self.Buton_bolme.place(x=_Buton_bolme_.place_x, y=_Buton_bolme_.place_y)
+
+        _Buton_ustalma_ = button(
+            text = "^",
+            place_x = 530,
+            place_y = 180,
+            height = 60,
+            width = 70,
+            panel_read = "^",
+            fg_color = "#DAA520",
+            hover_color = "#FFD700",
+            font=("italic",30)
+        )
+        self.Buton_ustalma = ctk.CTkButton(self.Window,
+            text=_Buton_ustalma_.text,
+            font=_Buton_ustalma_.font,
+            height=_Buton_ustalma_.height,
+            width=_Buton_ustalma_.width,
+            fg_color=_Buton_ustalma_.fg_color,
+            hover_color=_Buton_ustalma_.hover_color,
+            command=partial(main_panel_add_fonk,_Buton_ustalma_.panel_read)
+            )
+        self.Buton_ustalma.place(x=_Buton_ustalma_.place_x, y=_Buton_ustalma_.place_y)
+
+        _Buton_ciftsifir_ = button(
+            text = "00",
+            place_x = 450,
+            place_y = 260,
+            height = 60,
+            width = 150,
+            panel_read = "00",
+            fg_color = "#DAA520",
+            hover_color = "#FFD700",
+            font=("italic",30)
+        )
+        self.Buton_ciftsifir = ctk.CTkButton(self.Window,
+            text=_Buton_ciftsifir_.text,
+            font=_Buton_ciftsifir_.font,
+            height=_Buton_ciftsifir_.height,
+            width=_Buton_ciftsifir_.width,
+            fg_color=_Buton_ciftsifir_.fg_color,
+            hover_color=_Buton_ciftsifir_.hover_color,
+            command=partial(main_panel_add_fonk,_Buton_ciftsifir_.panel_read)
+            )
+        self.Buton_ciftsifir.place(x=_Buton_ciftsifir_.place_x, y=_Buton_ciftsifir_.place_y)
+
+        _Buton_temizle_ = button(
+            text = "Temizle",
+            place_x = 450,
+            place_y = 330,
+            height = 60,
+            width = 150,
+            fg_color = "#DAA520",
+            hover_color = "#FFD700",
+            font=("italic",30)
+        )
+        self.Buton_temizle = ctk.CTkButton(self.Window,
+            text=_Buton_temizle_.text,
+            font=_Buton_temizle_.font,
+            height=_Buton_temizle_.height,
+            width=_Buton_temizle_.width,
+            fg_color=_Buton_temizle_.fg_color,
+            hover_color=_Buton_temizle_.hover_color,
+            command=temizle_fonk
+            )
+        self.Buton_temizle.place(x=_Buton_temizle_.place_x, y=_Buton_temizle_.place_y)
+
+
+    def imza(self):
+        self.alt_metin = ctk.CTkLabel(self.Window,
+        text="© 2025 Hazırlayan: Yiğit Çıtak  Github.com/YigitC7 ",
+        fg_color="#4169E1",
+        text_color="white",
+        font=("italic",15)
+        )
+        self.alt_metin.place(x=10,y=406)
 
 if __name__ == "__main__":
     Window = ctk.CTk()
